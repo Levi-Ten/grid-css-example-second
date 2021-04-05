@@ -26,12 +26,11 @@ body {
 }
 .box {
 	display: grid;
-	
-	grid-template-columns: 1fr 1fr; /*заменяем строку выше*/
+	grid-template-columns: 1fr 1fr; 
 	grid-gap: 10px 10px;
 	/*после того как дали имена*/
 	grid-template-areas: 
-	'header header' /*поему дублируем у нас две части*/
+	'header header' /*почему дублируем? у нас две части*/
 	'aside content' /*если не хотим дублировать ставим точку'header.'*/
 	'footer footer';
 	height: 100vh; /*на весь экран*/
