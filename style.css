@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	counter-reset: list;
+}
+.item {
+	background-color: #B2F6FA;
+	font-size: 22px;
+	font-weight: 700;
+	border: 2px solid #FAE98B;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+.item:nth-child(even) {
+	background-color: #9CA2F6;
+}
+.item::before {
+	content: counter(list);
+	counter-increment: list;
+}
+.box {
+	display: grid;
+	
+	grid-template-columns: 1fr 1fr; /*заменяем строку выше*/
+	grid-gap: 10px 10px;
+	/*после того как дали имена*/
+	grid-template-areas: 
+	'header header' /*поему дублируем у нас две части*/
+	'aside content' /*если не хотим дублировать ставим точку'header.'*/
+	'footer footer';
+	height: 100vh; /*на весь экран*/
+
+}
+/*даём им имена*/
+.header {
+	grid-area: header; /*это просто название которое мы написали*/
+}
+.aside {
+	grid-area: aside;
+}
+.content {
+	grid-area: content;
+}
+.footer {
+	grid-area: footer;
+}
