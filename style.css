@@ -28,17 +28,14 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr; 
 	grid-gap: 10px 10px;
-	/*после того как дали имена*/
 	grid-template-areas: 
-	'header header' /*почему дублируем? у нас две части*/
-	'aside content' /*если не хотим дублировать ставим точку'header.'*/
+	'header header'
+	'aside content' 
 	'footer footer';
-	height: 100vh; /*на весь экран*/
-
+	height: 100vh; 
 }
-/*даём им имена*/
 .header {
-	grid-area: header; /*это просто название которое мы написали*/
+	grid-area: header;
 }
 .aside {
 	grid-area: aside;
